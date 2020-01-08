@@ -24,6 +24,11 @@ class AppCoordinator: BaseCoordinator {
         loginCoordinator.start()
     }
 
+    func presentTabBar() {
+        let viewController = ViewControllerFactory.makeTabBarVC()
+        engine.replace(viewController: viewController)
+    }
+
     func presentDashboard() {
         let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine)
         dashboardCoordinator.start()

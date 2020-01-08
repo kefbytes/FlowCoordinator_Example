@@ -18,13 +18,13 @@ class DashboardCoordinator: BaseCoordinator {
 
     override func start() {
         let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
-        let viewModel = ViewModelFactory.dashboardVM(appCoordinator: coordinator)
-        let viewController = ViewControllerFactory.dashboardVC(viewModel: viewModel)
+        let viewModel = ViewModelFactory.makeDashboardVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeDashboardVC(viewModel: viewModel)
         engine.replace(viewController: viewController)
     }
 
     func displayDashboardDetails() {
-        let viewController = ViewControllerFactory.dashboardDetailVC()
+        let viewController = ViewControllerFactory.makeDashboardDetailVC()
         engine.push(viewController: viewController)
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E49F8EB723C6859F00F144E9 /* TabBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EB623C6859F00F144E9 /* TabBarVM.swift */; };
+		E49F8EB923C6861700F144E9 /* OrdersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EB823C6861700F144E9 /* OrdersVM.swift */; };
 		E4AFB9C423C61843005F1FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9C323C61843005F1FF7 /* AppDelegate.swift */; };
 		E4AFB9C623C61843005F1FF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9C523C61843005F1FF7 /* SceneDelegate.swift */; };
 		E4AFB9CD23C61844005F1FF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AFB9CC23C61844005F1FF7 /* Assets.xcassets */; };
@@ -25,9 +27,12 @@
 		E4AFB9F823C632EF005F1FF7 /* DashboardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F723C632EF005F1FF7 /* DashboardDetailVC.swift */; };
 		E4AFB9FA23C63372005F1FF7 /* DashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F923C63372005F1FF7 /* DashboardVM.swift */; };
 		E4CA7F1B23C641D900AD9085 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */; };
+		E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E49F8EB623C6859F00F144E9 /* TabBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVM.swift; sourceTree = "<group>"; };
+		E49F8EB823C6861700F144E9 /* OrdersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVM.swift; sourceTree = "<group>"; };
 		E4AFB9C023C61843005F1FF7 /* FlowCoordinator_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowCoordinator_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AFB9C323C61843005F1FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4AFB9C523C61843005F1FF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		E4AFB9F723C632EF005F1FF7 /* DashboardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailVC.swift; sourceTree = "<group>"; };
 		E4AFB9F923C63372005F1FF7 /* DashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVM.swift; sourceTree = "<group>"; };
 		E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
+		E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 		E4AFB9D723C61907005F1FF7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */,
+				E49F8EB623C6859F00F144E9 /* TabBarVM.swift */,
 				E4CA7F1923C641B500AD9085 /* Orders */,
 				E4AFB9F423C6307A005F1FF7 /* Dashboard */,
 				E4AFB9D823C6190F005F1FF7 /* Login */,
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */,
+				E49F8EB823C6861700F144E9 /* OrdersVM.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -240,11 +249,14 @@
 				E4AFB9DC23C6198D005F1FF7 /* LoginVM.swift in Sources */,
 				E4AFB9F823C632EF005F1FF7 /* DashboardDetailVC.swift in Sources */,
 				E4AFB9E923C6205B005F1FF7 /* BaseCoordinator.swift in Sources */,
+				E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */,
 				E4AFB9EB23C6207A005F1FF7 /* Coordinator.swift in Sources */,
 				E4AFB9C423C61843005F1FF7 /* AppDelegate.swift in Sources */,
 				E4AFB9E523C61F34005F1FF7 /* CoordinatorFactory.swift in Sources */,
 				E4AFB9FA23C63372005F1FF7 /* DashboardVM.swift in Sources */,
+				E49F8EB723C6859F00F144E9 /* TabBarVM.swift in Sources */,
 				E4AFB9E023C61AC3005F1FF7 /* LoginCoordinator.swift in Sources */,
+				E49F8EB923C6861700F144E9 /* OrdersVM.swift in Sources */,
 				E4AFB9E723C62030005F1FF7 /* AppCoordinator.swift in Sources */,
 				E4AFB9E223C61DB9005F1FF7 /* NavigationEngine.swift in Sources */,
 				E4AFB9F623C63094005F1FF7 /* DashboardVC.swift in Sources */,

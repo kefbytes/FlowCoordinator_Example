@@ -1,5 +1,5 @@
 //
-//  LoginVM.swift
+//  OrdersVM.swift
 //  FlowCoordinator_Example
 //
 //  Created by Franks,Kent on 1/8/20.
@@ -8,19 +8,14 @@
 
 import Foundation
 
-protocol LoginVMProtocol {
+protocol OrdersVMProtocol {
     var appCoordinator: AppCoordinator? { get }
-    func loginWithCredentials()
 }
 
-struct LoginVM: LoginVMProtocol {
+struct OrdersVM: OrdersVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
-    }
-
-    func loginWithCredentials() {
-        appCoordinator?.presentTabBar()
     }
 }

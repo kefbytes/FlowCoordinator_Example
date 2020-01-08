@@ -10,7 +10,6 @@ import UIKit
 
 class DashboardVC: UIViewController {
     var dashboardVM: DashboardVMProtocol?
-    let tabBarCnt = UITabBarController()
 
     init(viewModel: DashboardVMProtocol) {
         self.dashboardVM = viewModel
@@ -25,6 +24,7 @@ class DashboardVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         setupDetailsButton()
+        setupTabBar()
     }
 
     // MARK: UI
@@ -34,6 +34,12 @@ class DashboardVC: UIViewController {
         detailsButton.setTitle("Go to details", for: .normal)
         detailsButton.addTarget(self, action: #selector(self.presentDetailsAction), for: .touchUpInside)
         view.addSubview(detailsButton)
+    }
+
+    private func setupTabBar() {
+        let tabBar = UITabBar()
+        tabBar.backgroundColor = .yellow
+        view.addSubview(tabBar)
     }
 
     // MARK: Actions

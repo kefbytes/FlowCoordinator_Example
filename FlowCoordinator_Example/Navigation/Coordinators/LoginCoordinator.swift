@@ -18,8 +18,8 @@ class LoginCoordinator: BaseCoordinator {
 
     override func start() {
         let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
-        let loginVM = ViewModelFactory.loginVM(appCoordinator: coordinator)
-        let loginVC = ViewControllerFactory.loginVC(viewModel: loginVM)
+        let loginVM = ViewModelFactory.makeLoginVM(appCoordinator: coordinator)
+        let loginVC = ViewControllerFactory.makeLoginVC(viewModel: loginVM)
         engine.push(viewController: loginVC)
     }
 }
