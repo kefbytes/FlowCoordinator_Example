@@ -18,16 +18,15 @@ class AppCoordinator: BaseCoordinator {
         super.init()
     }
 
+    // root view
     override func start() {
-        // preparing root view
         let loginCoordinator = CoordinatorFactory.makeLoginCoordinator(navigationEngine: engine)
         loginCoordinator.start()
     }
 
     func presentTabBar() {
-        let viewModel = ViewModelFactory.makeTabBarVM(appCoordinator: self)
-        let viewController = ViewControllerFactory.makeTabBarVC(viewModel: viewModel)
-        engine.replace(viewController: viewController)
+        let tabBarCoordinator = CoordinatorFactory.makeTabBarCoordinator(navigationEngine: engine)
+        tabBarCoordinator.start()
     }
 
     func presentDashboard() {

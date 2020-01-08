@@ -12,6 +12,7 @@ import UIKit
 protocol CoordinatorFactoryProtocol {
     static func makeAppCoordinator(navigationEngine: NavigationEngineProtocol) -> AppCoordinator
     static func makeLoginCoordinator(navigationEngine: NavigationEngineProtocol) -> LoginCoordinator
+    static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol) -> TabBarCoordinator
     static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator
 }
 
@@ -24,6 +25,10 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
         return LoginCoordinator(navigationEngine: navigationEngine)
     }
 
+    static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol) -> TabBarCoordinator {
+        return TabBarCoordinator(navigationEngine: navigationEngine)
+    }
+    
     static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator {
         return DashboardCoordinator(navigationEngine: navigationEngine)
     }
