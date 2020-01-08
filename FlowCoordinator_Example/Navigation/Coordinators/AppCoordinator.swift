@@ -25,7 +25,8 @@ class AppCoordinator: BaseCoordinator {
     }
 
     func presentTabBar() {
-        let viewController = ViewControllerFactory.makeTabBarVC()
+        let viewModel = ViewModelFactory.makeTabBarVM(appCoordinator: self)
+        let viewController = ViewControllerFactory.makeTabBarVC(viewModel: viewModel)
         engine.replace(viewController: viewController)
     }
 
