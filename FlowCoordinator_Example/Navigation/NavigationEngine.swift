@@ -11,6 +11,7 @@ import UIKit
 
 protocol NavigationEngineProtocol {
     func push(viewController: UIViewController)
+    func replace(viewController: UIViewController)
 }
 
 class NavigationEngine: NavigationEngineProtocol {
@@ -22,5 +23,9 @@ class NavigationEngine: NavigationEngineProtocol {
 
     func push(viewController: UIViewController) {
         navigationController.pushViewController(viewController, animated: true)
+    }
+
+    func replace(viewController: UIViewController) {
+        navigationController.viewControllers = [viewController]
     }
 }

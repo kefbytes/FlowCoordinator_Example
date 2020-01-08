@@ -1,5 +1,5 @@
 //
-//  LoginVM.swift
+//  DashboardVM.swift
 //  FlowCoordinator_Example
 //
 //  Created by Franks,Kent on 1/8/20.
@@ -8,19 +8,19 @@
 
 import Foundation
 
-protocol LoginVMProtocol {
+protocol DashboardVMProtocol {
     var appCoordinator: AppCoordinator? { get }
-    func loginWithCredentials()
+    func displayDetails()
 }
 
-struct LoginVM: LoginVMProtocol {
+struct DashboardVM: DashboardVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
     }
 
-    func loginWithCredentials() {
-        appCoordinator?.presentDashboard()
+    func displayDetails() {
+        appCoordinator?.presentDashboardDetails()
     }
 }

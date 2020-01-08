@@ -9,10 +9,9 @@
 import UIKit
 
 class LoginVC: UIViewController {
+    var loginVM: LoginVMProtocol?
 
-    var loginVM: LoginVM?
-
-    init(viewModel: LoginVM) {
+    init(viewModel: LoginVMProtocol) {
         self.loginVM = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -23,7 +22,21 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemYellow
+        view.backgroundColor = .lightGray
+        setupLoginButton()
     }
 
+    // MARK: UI
+    private func setupLoginButton() {
+        let loginButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        loginButton.center = view.center
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.addTarget(self, action: #selector(self.loginAction), for: .touchUpInside)
+        view.addSubview(loginButton)
+    }
+
+    // MARK: Actions
+    @objc private func loginAction() {
+        loginVM?.loginWithCredentials()
+    }
 }

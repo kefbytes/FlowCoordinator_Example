@@ -23,4 +23,14 @@ class AppCoordinator: BaseCoordinator {
         let loginCoordinator = CoordinatorFactory.makeLoginCoordinator(navigationEngine: engine)
         loginCoordinator.start()
     }
+
+    func presentDashboard() {
+        let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine)
+        dashboardCoordinator.start()
+    }
+
+    func presentDashboardDetails() {
+        let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine)
+        dashboardCoordinator.displayDashboardDetails()
+    }
 }

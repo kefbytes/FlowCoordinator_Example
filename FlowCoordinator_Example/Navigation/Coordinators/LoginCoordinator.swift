@@ -9,16 +9,17 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator {
+class LoginCoordinator: BaseCoordinator {
     private let engine: NavigationEngineProtocol
 
     init(navigationEngine: NavigationEngineProtocol) {
         engine = navigationEngine
     }
 
-    func start() {
-        let loginVM = LoginVM()
-        let loginVC = LoginVC(viewModel: loginVM)
+    override func start() {
+        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
+        let loginVM = ViewModelFactory.loginVM(appCoordinator: coordinator)
+        let loginVC = ViewControllerFactory.loginVC(viewModel: loginVM)
         engine.push(viewController: loginVC)
     }
 }
