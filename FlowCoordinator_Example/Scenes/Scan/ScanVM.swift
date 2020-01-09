@@ -1,18 +1,18 @@
 //
-//  OrdersVM.swift
+//  ScanVM.swift
 //  FlowCoordinator_Example
 //
-//  Created by Franks,Kent on 1/8/20.
+//  Created by Franks,Kent on 1/9/20.
 //  Copyright © 2020 Kefbytes LLC. All rights reserved.
 //
 
 import Foundation
 
-protocol OrdersVMProtocol: VMProtocol {
+protocol ScanVMProtocol: VMProtocol {
 
 }
 
-struct OrdersVM: OrdersVMProtocol {
+struct ScanVM: ScanVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {

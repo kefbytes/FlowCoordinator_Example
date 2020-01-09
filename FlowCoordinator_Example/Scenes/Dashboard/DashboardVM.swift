@@ -8,8 +8,7 @@
 
 import Foundation
 
-protocol DashboardVMProtocol {
-    var appCoordinator: AppCoordinator? { get }
+protocol DashboardVMProtocol: VMProtocol {
     func displayDetails()
 }
 

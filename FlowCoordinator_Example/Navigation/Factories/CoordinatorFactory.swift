@@ -28,7 +28,7 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
     static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol) -> TabBarCoordinator {
         return TabBarCoordinator(navigationEngine: navigationEngine)
     }
-    
+
     static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator {
         return DashboardCoordinator(navigationEngine: navigationEngine)
     }

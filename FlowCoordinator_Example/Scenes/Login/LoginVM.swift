@@ -8,8 +8,7 @@
 
 import Foundation
 
-protocol LoginVMProtocol {
-    var appCoordinator: AppCoordinator? { get }
+protocol LoginVMProtocol: VMProtocol {
     func loginWithCredentials()
 }
 

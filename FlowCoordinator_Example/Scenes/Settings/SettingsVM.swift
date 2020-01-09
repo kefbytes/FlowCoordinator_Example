@@ -1,18 +1,18 @@
 //
-//  OrdersVM.swift
+//  SettingsVM.swift
 //  FlowCoordinator_Example
 //
-//  Created by Franks,Kent on 1/8/20.
+//  Created by Franks,Kent on 1/9/20.
 //  Copyright © 2020 Kefbytes LLC. All rights reserved.
 //
 
 import Foundation
 
-protocol OrdersVMProtocol: VMProtocol {
+protocol SettingsVMProtocol: VMProtocol {
 
 }
 
-struct OrdersVM: OrdersVMProtocol {
+struct SettingsVM: SettingsVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {
