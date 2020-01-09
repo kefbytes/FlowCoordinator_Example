@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E42271A423C78FDA00FB3A7A /* VCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271A323C78FDA00FB3A7A /* VCProtocol.swift */; };
 		E45E581823C76EB300AB7A75 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581723C76EB300AB7A75 /* ProductDetailsVC.swift */; };
 		E45E581A23C76EC400AB7A75 /* ProductDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581923C76EC400AB7A75 /* ProductDetailVM.swift */; };
 		E45E581C23C773E300AB7A75 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581B23C773E300AB7A75 /* ScanVC.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E42271A323C78FDA00FB3A7A /* VCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProtocol.swift; sourceTree = "<group>"; };
 		E45E581723C76EB300AB7A75 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		E45E581923C76EC400AB7A75 /* ProductDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVM.swift; sourceTree = "<group>"; };
 		E45E581B23C773E300AB7A75 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */,
 				E49F8EB623C6859F00F144E9 /* TabBarVM.swift */,
 				E45E582B23C774BA00AB7A75 /* VMProtocol.swift */,
+				E42271A323C78FDA00FB3A7A /* VCProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				E45E582423C7742A00AB7A75 /* ShipmentsVC.swift in Sources */,
 				E45E582223C7741400AB7A75 /* InventoryVM.swift in Sources */,
 				E49F8EBB23C6975F00F144E9 /* TabBarCoordinator.swift in Sources */,
+				E42271A423C78FDA00FB3A7A /* VCProtocol.swift in Sources */,
 				E4AFB9F123C62782005F1FF7 /* ViewModelFactory.swift in Sources */,
 				E4AFB9C623C61843005F1FF7 /* SceneDelegate.swift in Sources */,
 				E49F8EC023C69E1E00F144E9 /* OrderDetailsVM.swift in Sources */,
