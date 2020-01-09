@@ -12,7 +12,13 @@ protocol ViewModelFactoryProtocol {
     static func makeLoginVM(appCoordinator: AppCoordinator) -> LoginVMProtocol
     static func makeTabBarVM(appCoordinator: AppCoordinator) -> TabBarVMProtocol
     static func makeDashboardVM(appCoordinator: AppCoordinator) -> DashboardVMProtocol
+    static func makeDashboardDetailVM(appCoordinator: AppCoordinator) -> DashboardDetailVMProtocol
     static func makeOrdersVM(appCoordinator: AppCoordinator) -> OrdersVMProtocol
+    static func makeOrderDetailsVM(appCoordinator: AppCoordinator) -> OrderDetailsVMProtocol
+    static func makeScanVM(appCoordinator: AppCoordinator) -> ScanVMProtocol
+    static func makeInventoryVM(appCoordinator: AppCoordinator) -> InventoryVMProtocol
+    static func makeShipmentsVM(appCoordinator: AppCoordinator) -> ShipmentsVMProtocol
+    static func makeSettingsVM(appCoordinator: AppCoordinator) -> SettingsVMProtocol
 }
 
 struct ViewModelFactory: ViewModelFactoryProtocol {
@@ -28,7 +34,31 @@ struct ViewModelFactory: ViewModelFactoryProtocol {
         return DashboardVM(coordinator: appCoordinator)
     }
 
+    static func makeDashboardDetailVM(appCoordinator: AppCoordinator) -> DashboardDetailVMProtocol {
+        return DashboardDetailVM(coordinator: appCoordinator)
+    }
+
     static func makeOrdersVM(appCoordinator: AppCoordinator) -> OrdersVMProtocol {
         return OrdersVM(coordinator: appCoordinator)
+    }
+
+    static func makeOrderDetailsVM(appCoordinator: AppCoordinator) -> OrderDetailsVMProtocol {
+        return OrderDetailsVM(coordinator: appCoordinator)
+    }
+
+    static func makeScanVM(appCoordinator: AppCoordinator) -> ScanVMProtocol {
+        return ScanVM(coordinator: appCoordinator)
+    }
+
+    static func makeInventoryVM(appCoordinator: AppCoordinator) -> InventoryVMProtocol {
+        return InventoryVM(coordinator: appCoordinator)
+    }
+
+    static func makeShipmentsVM(appCoordinator: AppCoordinator) -> ShipmentsVMProtocol {
+        return ShipmentsVM(coordinator: appCoordinator)
+    }
+
+    static func makeSettingsVM(appCoordinator: AppCoordinator) -> SettingsVMProtocol {
+        return SettingsVM(coordinator: appCoordinator)
     }
 }

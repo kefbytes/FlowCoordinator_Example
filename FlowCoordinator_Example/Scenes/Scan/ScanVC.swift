@@ -8,7 +8,17 @@
 
 import UIKit
 
-class ScanVC: UIViewController {
+class ScanVC: UIViewController, VCProtocol {
+    var scanVM: ScanVMProtocol?
+
+    required init(viewModel: VMProtocol) {
+        self.scanVM = viewModel as? ScanVMProtocol
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

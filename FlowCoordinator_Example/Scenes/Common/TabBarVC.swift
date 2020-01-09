@@ -36,7 +36,7 @@ class TabBarVC: UIViewController {
         dashboardVC.title = "Dashboard"
         dashboardVC.tabBarItem = UITabBarItem.init(title: "Dashboard", image: UIImage(named: "Dashboard"), tag: 0)
 
-        let ordersVC = ViewControllerFactory.makeOrderslVC(viewModel: ordersVM)
+        let ordersVC = ViewControllerFactory.makeOrdersVC(viewModel: ordersVM)
         ordersVC.title = "Orders"
         ordersVC.tabBarItem = UITabBarItem.init(title: "Orders", image: UIImage(named: "Orders"), tag: 1)
 

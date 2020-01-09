@@ -8,12 +8,11 @@
 
 import UIKit
 
-class OrdersVC: UIViewController {
+class OrdersVC: UIViewController, VCProtocol {
+    var ordersVM: OrdersVMProtocol?
 
-    var ordersVM: OrdersVMProtocol
-
-    init(viewModel: OrdersVMProtocol) {
-        self.ordersVM = viewModel
+    required init(viewModel: VMProtocol) {
+        self.ordersVM = viewModel as? OrdersVMProtocol
         super.init(nibName: nil, bundle: nil)
     }
 

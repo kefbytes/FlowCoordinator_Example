@@ -106,8 +106,8 @@
 				E45E581923C76EC400AB7A75 /* ProductDetailVM.swift */,
 				E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */,
 				E49F8EB623C6859F00F144E9 /* TabBarVM.swift */,
-				E45E582B23C774BA00AB7A75 /* VMProtocol.swift */,
 				E42271A323C78FDA00FB3A7A /* VCProtocol.swift */,
+				E45E582B23C774BA00AB7A75 /* VMProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";

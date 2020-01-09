@@ -24,7 +24,9 @@ class DashboardCoordinator: BaseCoordinator {
     }
 
     func displayDashboardDetails() {
-        let viewController = ViewControllerFactory.makeDashboardDetailVC()
+        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
+        let viewModel = ViewModelFactory.makeDashboardDetailVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeDashboardDetailVC(viewModel: viewModel)
         engine.push(viewController: viewController)
     }
 }

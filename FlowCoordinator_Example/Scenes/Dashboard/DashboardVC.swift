@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DashboardVC: UIViewController {
+class DashboardVC: UIViewController, VCProtocol {
     var dashboardVM: DashboardVMProtocol?
 
-    init(viewModel: DashboardVMProtocol) {
-        self.dashboardVM = viewModel
+    required init(viewModel: VMProtocol) {
+        self.dashboardVM = viewModel as? DashboardVMProtocol
         super.init(nibName: nil, bundle: nil)
     }
 

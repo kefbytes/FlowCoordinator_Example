@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, VCProtocol {
     var loginVM: LoginVMProtocol?
 
-    init(viewModel: LoginVMProtocol) {
-        self.loginVM = viewModel
+    required init(viewModel: VMProtocol) {
+        self.loginVM = viewModel as? LoginVMProtocol
         super.init(nibName: nil, bundle: nil)
     }
 

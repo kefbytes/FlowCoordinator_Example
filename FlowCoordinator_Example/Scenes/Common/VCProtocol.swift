@@ -9,6 +9,6 @@
 import Foundation
 
 protocol VCProtocol {
-    init(viewModel: OrdersVMProtocol)
+    init(viewModel: VMProtocol)
 }
 
