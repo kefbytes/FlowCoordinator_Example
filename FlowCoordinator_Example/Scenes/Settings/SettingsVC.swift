@@ -22,7 +22,9 @@ class SettingsVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemGray2
+        self.title = "Settings"
 
-        // Do any additional setup after loading the view.
     }
 }
+

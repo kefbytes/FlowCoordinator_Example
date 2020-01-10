@@ -43,4 +43,9 @@ class AppCoordinator: BaseCoordinator {
         let scanCoordinator = CoordinatorFactory.makeScanCoordinator(navigationEngine: engine)
         scanCoordinator.scanComplete()
     }
+
+    func presentProductDetails() {
+        let productDetailsCoordinator = CoordinatorFactory.makeProductDetailsCoordinator(navigationEngine: engine)
+        productDetailsCoordinator.start()
+    }
 }

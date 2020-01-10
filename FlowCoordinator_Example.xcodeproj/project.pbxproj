@@ -50,6 +50,7 @@
 		E4B741D123C8B6B3000B3901 /* AddItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B741D023C8B6B3000B3901 /* AddItemVM.swift */; };
 		E4CA7F1B23C641D900AD9085 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */; };
 		E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */; };
+		E4E75B3C23C903AD00BC4B06 /* ProductDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		E4B741D023C8B6B3000B3901 /* AddItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVM.swift; sourceTree = "<group>"; };
 		E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
 		E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				E42271AD23C7F29D00FB3A7A /* InventoryCoordinator.swift */,
 				E42271AF23C7F31800FB3A7A /* ShipmentsCoordinator.swift */,
 				E42271B123C7F36500FB3A7A /* SettingsCoordinator.swift */,
+				E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				E42271A423C78FDA00FB3A7A /* VCProtocol.swift in Sources */,
 				E4AFB9F123C62782005F1FF7 /* ViewModelFactory.swift in Sources */,
 				E4AFB9C623C61843005F1FF7 /* SceneDelegate.swift in Sources */,
+				E4E75B3C23C903AD00BC4B06 /* ProductDetailsCoordinator.swift in Sources */,
 				E49F8EC023C69E1E00F144E9 /* OrderDetailsVM.swift in Sources */,
 				E4AFB9EF23C62690005F1FF7 /* ViewControllerFactory.swift in Sources */,
 				E45E582023C7740600AB7A75 /* InventoryVC.swift in Sources */,

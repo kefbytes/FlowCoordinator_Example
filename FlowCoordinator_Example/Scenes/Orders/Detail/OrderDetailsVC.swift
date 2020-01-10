@@ -22,6 +22,22 @@ class OrderDetailsVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Order Details"
         view.backgroundColor = .systemIndigo
+        setupProductDetailsButton()
     }
+
+    private func setupProductDetailsButton() {
+        let setupProductDetailsButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        setupProductDetailsButton.center = view.center
+        setupProductDetailsButton.setTitle("Go to product details", for: .normal)
+        setupProductDetailsButton.addTarget(self, action: #selector(self.productDetailsAction), for: .touchUpInside)
+        view.addSubview(setupProductDetailsButton)
+    }
+
+    // MARK: Actions
+    @objc private func productDetailsAction() {
+        orderDetailsVM?.goToProductDetails()
+    }
+
 }

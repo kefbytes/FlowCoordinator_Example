@@ -23,5 +23,6 @@ class ProductDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
+        self.title = "Product Details"
     }
 }

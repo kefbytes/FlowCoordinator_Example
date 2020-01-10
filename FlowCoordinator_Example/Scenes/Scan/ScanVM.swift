@@ -20,6 +20,6 @@ struct ScanVM: ScanVMProtocol {
     }
 
     func scanComplete() {
-        
+        appCoordinator?.scanComplete()
     }
 }

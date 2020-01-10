@@ -22,7 +22,7 @@ class AddItemVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemGreen
+        self.title = "Add Item"
     }
 }

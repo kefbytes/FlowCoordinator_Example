@@ -22,7 +22,7 @@ class InventoryVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemOrange
+        self.title = "Inventory"
     }
 }

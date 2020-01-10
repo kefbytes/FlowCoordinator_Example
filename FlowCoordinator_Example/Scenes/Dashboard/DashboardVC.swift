@@ -23,5 +23,6 @@ class DashboardVC: UIViewController, VCProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
+        self.title = "Dashboard"
     }
 }
