@@ -22,7 +22,7 @@ class ShipmentsVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemGreen
         self.title = "Shipments"
     }
 }

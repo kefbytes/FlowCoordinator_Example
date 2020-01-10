@@ -9,7 +9,7 @@
 import Foundation
 
 protocol InventoryVMProtocol: VMProtocol {
-
+    func goToProductDetails()
 }
 
 struct InventoryVM: InventoryVMProtocol {
@@ -17,5 +17,9 @@ struct InventoryVM: InventoryVMProtocol {
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
+    }
+
+    func goToProductDetails() {
+        appCoordinator?.presentProductDetails()
     }
 }

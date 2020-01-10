@@ -13,6 +13,8 @@ protocol TabBarVMProtocol {
     var dashboardVM: DashboardVMProtocol { get }
     var ordersVM: OrdersVMProtocol { get }
     var scanVM: ScanVMProtocol { get }
+    var inventoryVM: InventoryVMProtocol { get }
+    var shipmentsVM: ShipmentsVMProtocol { get }
 }
 
 struct TabBarVM: TabBarVMProtocol {
@@ -20,11 +22,15 @@ struct TabBarVM: TabBarVMProtocol {
     var dashboardVM: DashboardVMProtocol
     var ordersVM: OrdersVMProtocol
     var scanVM: ScanVMProtocol
+    var inventoryVM: InventoryVMProtocol
+    var shipmentsVM: ShipmentsVMProtocol
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
         dashboardVM = ViewModelFactory.makeDashboardVM(appCoordinator: coordinator)
         ordersVM = ViewModelFactory.makeOrdersVM(appCoordinator: coordinator)
         scanVM = ViewModelFactory.makeScanVM(appCoordinator: coordinator)
+        inventoryVM = ViewModelFactory.makeInventoryVM(appCoordinator: coordinator)
+        shipmentsVM = ViewModelFactory.makeShipmentsVM(appCoordinator: coordinator)
     }
 }

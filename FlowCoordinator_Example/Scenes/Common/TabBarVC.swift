@@ -29,7 +29,11 @@ class TabBarVC: UIViewController {
     }
 
     func createTabBarController() {
-        guard let dashboardVM = tabBarVM?.dashboardVM, let ordersVM = tabBarVM?.ordersVM, let scanVM = tabBarVM?.scanVM else {
+        guard let dashboardVM = tabBarVM?.dashboardVM,
+            let ordersVM = tabBarVM?.ordersVM,
+            let scanVM = tabBarVM?.scanVM,
+            let inventoryVM = tabBarVM?.inventoryVM,
+            let shipmentsVM = tabBarVM?.shipmentsVM else {
             return
         }
 
@@ -48,7 +52,17 @@ class TabBarVC: UIViewController {
         scanVC.title = "Scan"
         scanVC.tabBarItem = UITabBarItem.init(title: "Scan", image: UIImage(named: "Scan"), tag: 2)
 
-        let controllerArray = [dashboardVC, ordersVC, scanVC]
+        // Tab 4
+        let inventoryVC = ViewControllerFactory.makeInventoryVC(viewModel: inventoryVM)
+        inventoryVC.title = "Inventory"
+        inventoryVC.tabBarItem = UITabBarItem.init(title: "Inventory", image: UIImage(named: "Inventory"), tag: 3)
+
+        // Tab 5
+        let shipmentsVC = ViewControllerFactory.makeShipmentsVC(viewModel: shipmentsVM)
+        shipmentsVC.title = "Shipments"
+        shipmentsVC.tabBarItem = UITabBarItem.init(title: "Shipments", image: UIImage(named: "Shipments"), tag: 3)
+
+        let controllerArray = [dashboardVC, ordersVC, scanVC, inventoryVC, shipmentsVC]
         tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
 
         self.view.addSubview(tabBarCnt.view)

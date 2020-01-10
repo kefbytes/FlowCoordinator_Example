@@ -39,5 +39,4 @@ class OrderDetailsVC: UIViewController, VCProtocol {
     @objc private func productDetailsAction() {
         orderDetailsVM?.goToProductDetails()
     }
-
 }

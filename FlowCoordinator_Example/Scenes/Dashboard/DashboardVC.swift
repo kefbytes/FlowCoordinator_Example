@@ -14,6 +14,7 @@ class DashboardVC: UIViewController, VCProtocol {
     required init(viewModel: VMProtocol) {
         self.dashboardVM = viewModel as? DashboardVMProtocol
         super.init(nibName: nil, bundle: nil)
+        self.title = "Dashboard"
     }
 
     required init?(coder: NSCoder) {
@@ -23,6 +24,5 @@ class DashboardVC: UIViewController, VCProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        self.title = "Dashboard"
     }
 }
