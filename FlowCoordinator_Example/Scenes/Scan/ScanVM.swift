@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ScanVMProtocol: VMProtocol {
-
+    func scanComplete()
 }
 
 struct ScanVM: ScanVMProtocol {
@@ -17,5 +17,9 @@ struct ScanVM: ScanVMProtocol {
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
+    }
+
+    func scanComplete() {
+        
     }
 }

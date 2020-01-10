@@ -14,4 +14,11 @@ class ScanCoordinator: BaseCoordinator, CoordinatorProtocol {
     required init(navigationEngine: NavigationEngineProtocol) {
         self.engine = navigationEngine
     }
+
+    func scanComplete() {
+        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
+        let productDetailsVM = ViewModelFactory.makeProductDetailsVM(appCoordinator: coordinator)
+        let productDetailsVC = ViewControllerFactory.makeProductDetailsVC(viewModel: productDetailsVM)
+        engine.push(viewController: productDetailsVC)
+    }
 }

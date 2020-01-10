@@ -38,4 +38,9 @@ class AppCoordinator: BaseCoordinator {
         let ordersCoordinator = CoordinatorFactory.makeOrdersCoordinator(navigationEngine: engine)
         ordersCoordinator.displayOrderDetails()
     }
+
+    func scanComplete() {
+        let scanCoordinator = CoordinatorFactory.makeScanCoordinator(navigationEngine: engine)
+        scanCoordinator.scanComplete()
+    }
 }

@@ -9,9 +9,9 @@
 import UIKit
 
 class ProductDetailsVC: UIViewController {
-    var productDetailsVM: ProductDetailVMProtocol?
+    var productDetailsVM: ProductDetailsVMProtocol?
 
-    init(viewModel: ProductDetailVMProtocol) {
+    init(viewModel: ProductDetailsVMProtocol) {
         self.productDetailsVM = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,5 +24,4 @@ class ProductDetailsVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
     }
-    
 }

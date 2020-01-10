@@ -29,18 +29,26 @@ class TabBarVC: UIViewController {
     }
 
     func createTabBarController() {
-        guard let dashboardVM = tabBarVM?.dashboardVM, let ordersVM = tabBarVM?.ordersVM else {
+        guard let dashboardVM = tabBarVM?.dashboardVM, let ordersVM = tabBarVM?.ordersVM, let scanVM = tabBarVM?.scanVM else {
             return
         }
+
+        // Tab 1
         let dashboardVC = ViewControllerFactory.makeDashboardVC(viewModel: dashboardVM)
         dashboardVC.title = "Dashboard"
         dashboardVC.tabBarItem = UITabBarItem.init(title: "Dashboard", image: UIImage(named: "Dashboard"), tag: 0)
 
+        // Tab 2
         let ordersVC = ViewControllerFactory.makeOrdersVC(viewModel: ordersVM)
         ordersVC.title = "Orders"
         ordersVC.tabBarItem = UITabBarItem.init(title: "Orders", image: UIImage(named: "Orders"), tag: 1)
 
-        let controllerArray = [dashboardVC, ordersVC]
+        // Tab 3
+        let scanVC = ViewControllerFactory.makeScanVC(viewModel: scanVM)
+        scanVC.title = "Scan"
+        scanVC.tabBarItem = UITabBarItem.init(title: "Scan", image: UIImage(named: "Scan"), tag: 2)
+
+        let controllerArray = [dashboardVC, ordersVC, scanVC]
         tabBarCnt.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
 
         self.view.addSubview(tabBarCnt.view)

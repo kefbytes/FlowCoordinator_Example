@@ -1,5 +1,5 @@
 //
-//  ProductDetailVM.swift
+//  ProductDetailsVM.swift
 //  FlowCoordinator_Example
 //
 //  Created by Franks,Kent on 1/9/20.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol ProductDetailVMProtocol: VMProtocol {
+protocol ProductDetailsVMProtocol: VMProtocol {
 
 }
 
-struct ProductDetailVM: ProductDetailVMProtocol {
+struct ProductDetailsVM: ProductDetailsVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {

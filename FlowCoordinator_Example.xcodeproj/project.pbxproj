@@ -15,7 +15,7 @@
 		E42271B023C7F31800FB3A7A /* ShipmentsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271AF23C7F31800FB3A7A /* ShipmentsCoordinator.swift */; };
 		E42271B223C7F36500FB3A7A /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271B123C7F36500FB3A7A /* SettingsCoordinator.swift */; };
 		E45E581823C76EB300AB7A75 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581723C76EB300AB7A75 /* ProductDetailsVC.swift */; };
-		E45E581A23C76EC400AB7A75 /* ProductDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581923C76EC400AB7A75 /* ProductDetailVM.swift */; };
+		E45E581A23C76EC400AB7A75 /* ProductDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581923C76EC400AB7A75 /* ProductDetailsVM.swift */; };
 		E45E581C23C773E300AB7A75 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581B23C773E300AB7A75 /* ScanVC.swift */; };
 		E45E581E23C773F000AB7A75 /* ScanVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581D23C773F000AB7A75 /* ScanVM.swift */; };
 		E45E582023C7740600AB7A75 /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E581F23C7740600AB7A75 /* InventoryVC.swift */; };
@@ -61,7 +61,7 @@
 		E42271AF23C7F31800FB3A7A /* ShipmentsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentsCoordinator.swift; sourceTree = "<group>"; };
 		E42271B123C7F36500FB3A7A /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		E45E581723C76EB300AB7A75 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
-		E45E581923C76EC400AB7A75 /* ProductDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVM.swift; sourceTree = "<group>"; };
+		E45E581923C76EC400AB7A75 /* ProductDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVM.swift; sourceTree = "<group>"; };
 		E45E581B23C773E300AB7A75 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		E45E581D23C773F000AB7A75 /* ScanVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVM.swift; sourceTree = "<group>"; };
 		E45E581F23C7740600AB7A75 /* InventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
@@ -114,8 +114,6 @@
 		E45E581123C766F800AB7A75 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E45E581723C76EB300AB7A75 /* ProductDetailsVC.swift */,
-				E45E581923C76EC400AB7A75 /* ProductDetailVM.swift */,
 				E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */,
 				E49F8EB623C6859F00F144E9 /* TabBarVM.swift */,
 				E42271A323C78FDA00FB3A7A /* VCProtocol.swift */,
@@ -209,6 +207,7 @@
 				E45E581423C76E6400AB7A75 /* Inventory */,
 				E45E581623C76E7E00AB7A75 /* Shipments */,
 				E45E581523C76E7300AB7A75 /* Settings */,
+				E4B741D223C8C589000B3901 /* ProductDetails */,
 				E45E581123C766F800AB7A75 /* Common */,
 			);
 			path = Scenes;
@@ -278,6 +277,15 @@
 				E4B741D023C8B6B3000B3901 /* AddItemVM.swift */,
 			);
 			path = AddItem;
+			sourceTree = "<group>";
+		};
+		E4B741D223C8C589000B3901 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E45E581723C76EB300AB7A75 /* ProductDetailsVC.swift */,
+				E45E581923C76EC400AB7A75 /* ProductDetailsVM.swift */,
+			);
+			path = ProductDetails;
 			sourceTree = "<group>";
 		};
 		E4CA7F1923C641B500AD9085 /* Orders */ = {
@@ -374,7 +382,7 @@
 				E49F8EB723C6859F00F144E9 /* TabBarVM.swift in Sources */,
 				E4AFB9E023C61AC3005F1FF7 /* LoginCoordinator.swift in Sources */,
 				E4B741CF23C8B672000B3901 /* AddItemVC.swift in Sources */,
-				E45E581A23C76EC400AB7A75 /* ProductDetailVM.swift in Sources */,
+				E45E581A23C76EC400AB7A75 /* ProductDetailsVM.swift in Sources */,
 				E49F8EB923C6861700F144E9 /* OrdersVM.swift in Sources */,
 				E42271B023C7F31800FB3A7A /* ShipmentsCoordinator.swift in Sources */,
 				E45E581C23C773E300AB7A75 /* ScanVC.swift in Sources */,
