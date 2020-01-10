@@ -12,7 +12,6 @@ protocol ViewModelFactoryProtocol {
     static func makeLoginVM(appCoordinator: AppCoordinator) -> LoginVMProtocol
     static func makeTabBarVM(appCoordinator: AppCoordinator) -> TabBarVMProtocol
     static func makeDashboardVM(appCoordinator: AppCoordinator) -> DashboardVMProtocol
-    static func makeDashboardDetailVM(appCoordinator: AppCoordinator) -> DashboardDetailVMProtocol
     static func makeOrdersVM(appCoordinator: AppCoordinator) -> OrdersVMProtocol
     static func makeOrderDetailsVM(appCoordinator: AppCoordinator) -> OrderDetailsVMProtocol
     static func makeScanVM(appCoordinator: AppCoordinator) -> ScanVMProtocol
@@ -33,10 +32,6 @@ struct ViewModelFactory: ViewModelFactoryProtocol {
 
     static func makeDashboardVM(appCoordinator: AppCoordinator) -> DashboardVMProtocol {
         return DashboardVM(coordinator: appCoordinator)
-    }
-
-    static func makeDashboardDetailVM(appCoordinator: AppCoordinator) -> DashboardDetailVMProtocol {
-        return DashboardDetailVM(coordinator: appCoordinator)
     }
 
     static func makeOrdersVM(appCoordinator: AppCoordinator) -> OrdersVMProtocol {

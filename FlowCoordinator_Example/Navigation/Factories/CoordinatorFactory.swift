@@ -14,6 +14,7 @@ protocol CoordinatorFactoryProtocol {
     static func makeLoginCoordinator(navigationEngine: NavigationEngineProtocol) -> LoginCoordinator
     static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol) -> TabBarCoordinator
     static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator
+    static func makeOrdersCoordinator(navigationEngine: NavigationEngineProtocol) -> OrdersCoordinator
 }
 
 final class CoordinatorFactory: CoordinatorFactoryProtocol {
@@ -31,5 +32,9 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
 
     static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator {
         return DashboardCoordinator(navigationEngine: navigationEngine)
+    }
+
+    static func makeOrdersCoordinator(navigationEngine: NavigationEngineProtocol) -> OrdersCoordinator {
+        return OrdersCoordinator(navigationEngine: navigationEngine)
     }
 }

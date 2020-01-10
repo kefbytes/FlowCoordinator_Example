@@ -9,7 +9,6 @@
 import UIKit
 
 class OrderDetailsVC: UIViewController, VCProtocol {
-
     var orderDetailsVM: OrderDetailsVMProtocol?
 
     required init(viewModel: VMProtocol) {
@@ -23,6 +22,6 @@ class OrderDetailsVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemIndigo
     }
-
 }

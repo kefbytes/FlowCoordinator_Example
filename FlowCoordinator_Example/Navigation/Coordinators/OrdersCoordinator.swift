@@ -1,5 +1,5 @@
 //
-//  OrdersDashboardCoordinator.swift
+//  OrdersCoordinator.swift
 //  FlowCoordinator_Example
 //
 //  Created by Franks,Kent on 1/9/20.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class OrdersDashboardCoordinator: BaseCoordinator, CoordinatorProtocol {
+class OrdersCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
 
     required init(navigationEngine: NavigationEngineProtocol) {
@@ -21,5 +21,12 @@ class OrdersDashboardCoordinator: BaseCoordinator, CoordinatorProtocol {
         let viewModel = ViewModelFactory.makeOrdersVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeOrdersVC(viewModel: viewModel)
         engine.replace(viewController: viewController)
+    }
+
+    func displayOrderDetails() {
+        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
+        let viewModel = ViewModelFactory.makeOrderDetailsVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeOrderDetailsVC(viewModel: viewModel)
+        engine.push(viewController: viewController)
     }
 }

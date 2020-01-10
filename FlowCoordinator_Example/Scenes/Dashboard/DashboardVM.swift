@@ -9,7 +9,7 @@
 import Foundation
 
 protocol DashboardVMProtocol: VMProtocol {
-    func displayDetails()
+
 }
 
 struct DashboardVM: DashboardVMProtocol {
@@ -17,9 +17,5 @@ struct DashboardVM: DashboardVMProtocol {
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
-    }
-
-    func displayDetails() {
-        appCoordinator?.presentDashboardDetails()
     }
 }

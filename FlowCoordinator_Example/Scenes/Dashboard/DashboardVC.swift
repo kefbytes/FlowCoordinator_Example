@@ -23,20 +23,5 @@ class DashboardVC: UIViewController, VCProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        setupDetailsButton()
-    }
-
-    // MARK: UI
-    private func setupDetailsButton() {
-        let detailsButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        detailsButton.center = view.center
-        detailsButton.setTitle("Go to details", for: .normal)
-        detailsButton.addTarget(self, action: #selector(self.presentDetailsAction), for: .touchUpInside)
-        view.addSubview(detailsButton)
-    }
-
-    // MARK: Actions
-    @objc private func presentDetailsAction() {
-        dashboardVM?.displayDetails()
     }
 }

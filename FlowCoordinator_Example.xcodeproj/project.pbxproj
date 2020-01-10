@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E42271A423C78FDA00FB3A7A /* VCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271A323C78FDA00FB3A7A /* VCProtocol.swift */; };
-		E42271A823C7EF7600FB3A7A /* OrdersDashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271A723C7EF7600FB3A7A /* OrdersDashboardCoordinator.swift */; };
+		E42271A823C7EF7600FB3A7A /* OrdersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271A723C7EF7600FB3A7A /* OrdersCoordinator.swift */; };
 		E42271AA23C7F03500FB3A7A /* ScanCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271A923C7F03500FB3A7A /* ScanCoordinator.swift */; };
 		E42271AC23C7F0A500FB3A7A /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271AB23C7F0A400FB3A7A /* CoordinatorProtocol.swift */; };
 		E42271AE23C7F29D00FB3A7A /* InventoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42271AD23C7F29D00FB3A7A /* InventoryCoordinator.swift */; };
@@ -25,7 +25,6 @@
 		E45E582823C7745100AB7A75 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582723C7745100AB7A75 /* SettingsVC.swift */; };
 		E45E582A23C7745D00AB7A75 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582923C7745D00AB7A75 /* SettingsVM.swift */; };
 		E45E582C23C774BA00AB7A75 /* VMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582B23C774BA00AB7A75 /* VMProtocol.swift */; };
-		E45E582E23C7753B00AB7A75 /* DashboardDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582D23C7753B00AB7A75 /* DashboardDetailVM.swift */; };
 		E49F8EB723C6859F00F144E9 /* TabBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EB623C6859F00F144E9 /* TabBarVM.swift */; };
 		E49F8EB923C6861700F144E9 /* OrdersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EB823C6861700F144E9 /* OrdersVM.swift */; };
 		E49F8EBB23C6975F00F144E9 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EBA23C6975F00F144E9 /* TabBarCoordinator.swift */; };
@@ -46,7 +45,6 @@
 		E4AFB9F123C62782005F1FF7 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F023C62782005F1FF7 /* ViewModelFactory.swift */; };
 		E4AFB9F323C63045005F1FF7 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F223C63045005F1FF7 /* DashboardCoordinator.swift */; };
 		E4AFB9F623C63094005F1FF7 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F523C63094005F1FF7 /* DashboardVC.swift */; };
-		E4AFB9F823C632EF005F1FF7 /* DashboardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F723C632EF005F1FF7 /* DashboardDetailVC.swift */; };
 		E4AFB9FA23C63372005F1FF7 /* DashboardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AFB9F923C63372005F1FF7 /* DashboardVM.swift */; };
 		E4B741CF23C8B672000B3901 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B741CE23C8B672000B3901 /* AddItemVC.swift */; };
 		E4B741D123C8B6B3000B3901 /* AddItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B741D023C8B6B3000B3901 /* AddItemVM.swift */; };
@@ -56,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		E42271A323C78FDA00FB3A7A /* VCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProtocol.swift; sourceTree = "<group>"; };
-		E42271A723C7EF7600FB3A7A /* OrdersDashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersDashboardCoordinator.swift; sourceTree = "<group>"; };
+		E42271A723C7EF7600FB3A7A /* OrdersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCoordinator.swift; sourceTree = "<group>"; };
 		E42271A923C7F03500FB3A7A /* ScanCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCoordinator.swift; sourceTree = "<group>"; };
 		E42271AB23C7F0A400FB3A7A /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		E42271AD23C7F29D00FB3A7A /* InventoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCoordinator.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 		E45E582723C7745100AB7A75 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		E45E582923C7745D00AB7A75 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
 		E45E582B23C774BA00AB7A75 /* VMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMProtocol.swift; sourceTree = "<group>"; };
-		E45E582D23C7753B00AB7A75 /* DashboardDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailVM.swift; sourceTree = "<group>"; };
 		E49F8EB623C6859F00F144E9 /* TabBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVM.swift; sourceTree = "<group>"; };
 		E49F8EB823C6861700F144E9 /* OrdersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVM.swift; sourceTree = "<group>"; };
 		E49F8EBA23C6975F00F144E9 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -96,7 +93,6 @@
 		E4AFB9F023C62782005F1FF7 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		E4AFB9F223C63045005F1FF7 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 		E4AFB9F523C63094005F1FF7 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
-		E4AFB9F723C632EF005F1FF7 /* DashboardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardDetailVC.swift; sourceTree = "<group>"; };
 		E4AFB9F923C63372005F1FF7 /* DashboardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVM.swift; sourceTree = "<group>"; };
 		E4B741CE23C8B672000B3901 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		E4B741D023C8B6B3000B3901 /* AddItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVM.swift; sourceTree = "<group>"; };
@@ -247,7 +243,7 @@
 				E4AFB9DF23C61AC3005F1FF7 /* LoginCoordinator.swift */,
 				E49F8EBA23C6975F00F144E9 /* TabBarCoordinator.swift */,
 				E4AFB9F223C63045005F1FF7 /* DashboardCoordinator.swift */,
-				E42271A723C7EF7600FB3A7A /* OrdersDashboardCoordinator.swift */,
+				E42271A723C7EF7600FB3A7A /* OrdersCoordinator.swift */,
 				E42271A923C7F03500FB3A7A /* ScanCoordinator.swift */,
 				E42271AD23C7F29D00FB3A7A /* InventoryCoordinator.swift */,
 				E42271AF23C7F31800FB3A7A /* ShipmentsCoordinator.swift */,
@@ -269,20 +265,10 @@
 		E4AFB9F423C6307A005F1FF7 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				E4AFB9FB23C6337A005F1FF7 /* Detail */,
 				E4AFB9F523C63094005F1FF7 /* DashboardVC.swift */,
 				E4AFB9F923C63372005F1FF7 /* DashboardVM.swift */,
 			);
 			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		E4AFB9FB23C6337A005F1FF7 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				E4AFB9F723C632EF005F1FF7 /* DashboardDetailVC.swift */,
-				E45E582D23C7753B00AB7A75 /* DashboardDetailVM.swift */,
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		E4B741CD23C8B64F000B3901 /* AddItem */ = {
@@ -373,12 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E45E582E23C7753B00AB7A75 /* DashboardDetailVM.swift in Sources */,
 				E4AFB9F323C63045005F1FF7 /* DashboardCoordinator.swift in Sources */,
 				E4AFB9DC23C6198D005F1FF7 /* LoginVM.swift in Sources */,
 				E42271AA23C7F03500FB3A7A /* ScanCoordinator.swift in Sources */,
 				E45E581E23C773F000AB7A75 /* ScanVM.swift in Sources */,
-				E4AFB9F823C632EF005F1FF7 /* DashboardDetailVC.swift in Sources */,
 				E4AFB9E923C6205B005F1FF7 /* BaseCoordinator.swift in Sources */,
 				E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */,
 				E45E582C23C774BA00AB7A75 /* VMProtocol.swift in Sources */,
@@ -410,7 +394,7 @@
 				E45E582223C7741400AB7A75 /* InventoryVM.swift in Sources */,
 				E42271AE23C7F29D00FB3A7A /* InventoryCoordinator.swift in Sources */,
 				E49F8EBB23C6975F00F144E9 /* TabBarCoordinator.swift in Sources */,
-				E42271A823C7EF7600FB3A7A /* OrdersDashboardCoordinator.swift in Sources */,
+				E42271A823C7EF7600FB3A7A /* OrdersCoordinator.swift in Sources */,
 				E42271A423C78FDA00FB3A7A /* VCProtocol.swift in Sources */,
 				E4AFB9F123C62782005F1FF7 /* ViewModelFactory.swift in Sources */,
 				E4AFB9C623C61843005F1FF7 /* SceneDelegate.swift in Sources */,

@@ -22,11 +22,4 @@ class DashboardCoordinator: BaseCoordinator, CoordinatorProtocol {
         let viewController = ViewControllerFactory.makeDashboardVC(viewModel: viewModel)
         engine.replace(viewController: viewController)
     }
-
-    func displayDashboardDetails() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
-        let viewModel = ViewModelFactory.makeDashboardDetailVM(appCoordinator: coordinator)
-        let viewController = ViewControllerFactory.makeDashboardDetailVC(viewModel: viewModel)
-        engine.push(viewController: viewController)
-    }
 }

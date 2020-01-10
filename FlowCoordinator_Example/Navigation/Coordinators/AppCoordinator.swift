@@ -34,8 +34,8 @@ class AppCoordinator: BaseCoordinator {
         dashboardCoordinator.start()
     }
 
-    func presentDashboardDetails() {
-        let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine)
-        dashboardCoordinator.displayDashboardDetails()
+    func presentOrderDetails() {
+        let ordersCoordinator = CoordinatorFactory.makeOrdersCoordinator(navigationEngine: engine)
+        ordersCoordinator.displayOrderDetails()
     }
 }

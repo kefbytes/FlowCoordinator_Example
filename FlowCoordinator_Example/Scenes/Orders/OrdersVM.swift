@@ -9,7 +9,7 @@
 import Foundation
 
 protocol OrdersVMProtocol: VMProtocol {
-
+    func displayOrderDetails()
 }
 
 struct OrdersVM: OrdersVMProtocol {
@@ -17,5 +17,8 @@ struct OrdersVM: OrdersVMProtocol {
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
+    }
+    func displayOrderDetails() {
+        appCoordinator?.presentOrderDetails()
     }
 }
