@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ShipmentsVMProtocol: VMProtocol {
-
+    func displayShipmentDetails()
 }
 
 struct ShipmentsVM: ShipmentsVMProtocol {
@@ -17,5 +17,9 @@ struct ShipmentsVM: ShipmentsVMProtocol {
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
+    }
+
+    func displayShipmentDetails() {
+        appCoordinator?.presentShipmentDetails()
     }
 }

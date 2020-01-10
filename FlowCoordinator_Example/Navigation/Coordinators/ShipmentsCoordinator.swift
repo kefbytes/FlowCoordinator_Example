@@ -15,4 +15,11 @@ class ShipmentsCoordinator: BaseCoordinator, CoordinatorProtocol {
     required init(navigationEngine: NavigationEngineProtocol) {
         self.engine = navigationEngine
     }
+
+    func displayShipmentDetails() {
+        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
+        let viewModel = ViewModelFactory.makeShipmentDetailsVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeShipmentDetailsVC(viewModel: viewModel)
+        engine.push(viewController: viewController)
+    }
 }

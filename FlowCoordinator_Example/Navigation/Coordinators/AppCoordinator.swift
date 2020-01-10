@@ -48,4 +48,9 @@ class AppCoordinator: BaseCoordinator {
         let productDetailsCoordinator = CoordinatorFactory.makeProductDetailsCoordinator(navigationEngine: engine)
         productDetailsCoordinator.start()
     }
+
+    func presentShipmentDetails() {
+        let shipmentsCoordinator = CoordinatorFactory.makeShipmentsCoordinator(navigationEngine: engine)
+        shipmentsCoordinator.displayShipmentDetails()
+    }
 }

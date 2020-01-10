@@ -18,6 +18,7 @@ struct OrdersVM: OrdersVMProtocol {
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
     }
+    
     func displayOrderDetails() {
         appCoordinator?.presentOrderDetails()
     }

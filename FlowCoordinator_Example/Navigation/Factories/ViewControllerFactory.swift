@@ -18,6 +18,7 @@ protocol ViewControllerFactoryProtocol {
     static func makeAddItemVC(viewModel: AddItemVMProtocol) -> AddItemVC
     static func makeInventoryVC(viewModel: InventoryVMProtocol) -> InventoryVC
     static func makeShipmentsVC(viewModel: ShipmentsVMProtocol) -> ShipmentsVC
+    static func makeShipmentDetailsVC(viewModel: ShipmentDetailsVMProtocol) -> ShipmentDetailsVC
     static func makeSettingsVC(viewModel: SettingsVMProtocol) -> SettingsVC
     static func makeProductDetailsVC(viewModel: ProductDetailsVMProtocol) -> ProductDetailsVC
 }
@@ -57,6 +58,10 @@ struct ViewControllerFactory: ViewControllerFactoryProtocol {
 
     static func makeShipmentsVC(viewModel: ShipmentsVMProtocol) -> ShipmentsVC {
         return ShipmentsVC(viewModel: viewModel)
+    }
+
+    static func makeShipmentDetailsVC(viewModel: ShipmentDetailsVMProtocol) -> ShipmentDetailsVC {
+        return ShipmentDetailsVC(viewModel: viewModel)
     }
 
     static func makeSettingsVC(viewModel: SettingsVMProtocol) -> SettingsVC {

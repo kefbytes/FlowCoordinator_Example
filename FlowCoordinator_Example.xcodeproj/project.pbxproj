@@ -51,6 +51,8 @@
 		E4CA7F1B23C641D900AD9085 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */; };
 		E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */; };
 		E4E75B3C23C903AD00BC4B06 /* ProductDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */; };
+		E4E75B3F23C90C5900BC4B06 /* ShipmentDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B3E23C90C5900BC4B06 /* ShipmentDetailsVC.swift */; };
+		E4E75B4123C90C9E00BC4B06 /* ShipmentDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B4023C90C9E00BC4B06 /* ShipmentDetailsVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,8 @@
 		E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
 		E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsCoordinator.swift; sourceTree = "<group>"; };
+		E4E75B3E23C90C5900BC4B06 /* ShipmentDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentDetailsVC.swift; sourceTree = "<group>"; };
+		E4E75B4023C90C9E00BC4B06 /* ShipmentDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentDetailsVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		E45E581623C76E7E00AB7A75 /* Shipments */ = {
 			isa = PBXGroup;
 			children = (
+				E4E75B3D23C90C2D00BC4B06 /* ShipmentDetails */,
 				E45E582323C7742A00AB7A75 /* ShipmentsVC.swift */,
 				E45E582523C7743700AB7A75 /* ShipmentsVM.swift */,
 			);
@@ -301,6 +306,15 @@
 			path = Orders;
 			sourceTree = "<group>";
 		};
+		E4E75B3D23C90C2D00BC4B06 /* ShipmentDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E4E75B3E23C90C5900BC4B06 /* ShipmentDetailsVC.swift */,
+				E4E75B4023C90C9E00BC4B06 /* ShipmentDetailsVM.swift */,
+			);
+			path = ShipmentDetails;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,6 +393,7 @@
 				E45E582C23C774BA00AB7A75 /* VMProtocol.swift in Sources */,
 				E4AFB9EB23C6207A005F1FF7 /* Coordinator.swift in Sources */,
 				E4AFB9C423C61843005F1FF7 /* AppDelegate.swift in Sources */,
+				E4E75B3F23C90C5900BC4B06 /* ShipmentDetailsVC.swift in Sources */,
 				E4AFB9E523C61F34005F1FF7 /* CoordinatorFactory.swift in Sources */,
 				E4AFB9FA23C63372005F1FF7 /* DashboardVM.swift in Sources */,
 				E4B741D123C8B6B3000B3901 /* AddItemVM.swift in Sources */,
@@ -406,6 +421,7 @@
 				E42271AE23C7F29D00FB3A7A /* InventoryCoordinator.swift in Sources */,
 				E49F8EBB23C6975F00F144E9 /* TabBarCoordinator.swift in Sources */,
 				E42271A823C7EF7600FB3A7A /* OrdersCoordinator.swift in Sources */,
+				E4E75B4123C90C9E00BC4B06 /* ShipmentDetailsVM.swift in Sources */,
 				E42271A423C78FDA00FB3A7A /* VCProtocol.swift in Sources */,
 				E4AFB9F123C62782005F1FF7 /* ViewModelFactory.swift in Sources */,
 				E4AFB9C623C61843005F1FF7 /* SceneDelegate.swift in Sources */,
