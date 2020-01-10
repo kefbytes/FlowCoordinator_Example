@@ -16,6 +16,7 @@ protocol ViewModelFactoryProtocol {
     static func makeOrdersVM(appCoordinator: AppCoordinator) -> OrdersVMProtocol
     static func makeOrderDetailsVM(appCoordinator: AppCoordinator) -> OrderDetailsVMProtocol
     static func makeScanVM(appCoordinator: AppCoordinator) -> ScanVMProtocol
+    static func makeAddItemVM(appCoordinator: AppCoordinator) -> AddItemVMProtocol
     static func makeInventoryVM(appCoordinator: AppCoordinator) -> InventoryVMProtocol
     static func makeShipmentsVM(appCoordinator: AppCoordinator) -> ShipmentsVMProtocol
     static func makeSettingsVM(appCoordinator: AppCoordinator) -> SettingsVMProtocol
@@ -48,6 +49,10 @@ struct ViewModelFactory: ViewModelFactoryProtocol {
 
     static func makeScanVM(appCoordinator: AppCoordinator) -> ScanVMProtocol {
         return ScanVM(coordinator: appCoordinator)
+    }
+
+    static func makeAddItemVM(appCoordinator: AppCoordinator) -> AddItemVMProtocol {
+        return AddItemVM(coordinator: appCoordinator)
     }
 
     static func makeInventoryVM(appCoordinator: AppCoordinator) -> InventoryVMProtocol {

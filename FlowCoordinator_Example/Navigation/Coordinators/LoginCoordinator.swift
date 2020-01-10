@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: BaseCoordinator {
-    private let engine: NavigationEngineProtocol
+class LoginCoordinator: BaseCoordinator, CoordinatorProtocol {
+    let engine: NavigationEngineProtocol
 
-    init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol) {
         engine = navigationEngine
     }
 

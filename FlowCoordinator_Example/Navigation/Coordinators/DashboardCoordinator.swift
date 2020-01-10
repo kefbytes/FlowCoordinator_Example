@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class DashboardCoordinator: BaseCoordinator {
-    private let engine: NavigationEngineProtocol
+class DashboardCoordinator: BaseCoordinator, CoordinatorProtocol {
+    let engine: NavigationEngineProtocol
 
-    init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol) {
         engine = navigationEngine
     }
 
