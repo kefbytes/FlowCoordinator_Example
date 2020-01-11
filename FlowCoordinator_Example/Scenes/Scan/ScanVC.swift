@@ -23,7 +23,6 @@ class ScanVC: UIViewController, VCProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemYellow
-        self.title = "Scan"
         setupScanButton()
     }
 

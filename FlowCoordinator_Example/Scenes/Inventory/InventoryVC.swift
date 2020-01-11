@@ -23,7 +23,6 @@ class InventoryVC: UIViewController, VCProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemOrange
-        self.title = "Inventory"
         setupProductDetailsButton()
     }
 
