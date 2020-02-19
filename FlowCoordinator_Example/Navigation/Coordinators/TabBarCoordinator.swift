@@ -1,5 +1,5 @@
 //
-//  LoginCoordinator.swift
+//  TabBarCoordinator.swift
 //  FlowCoordinator_Example
 //
 //  Created by Franks,Kent on 1/8/20.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoginCoordinator: BaseCoordinator, CoordinatorProtocol {
+class TabBarCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
 
     required init(navigationEngine: NavigationEngineProtocol) {
@@ -18,8 +18,8 @@ class LoginCoordinator: BaseCoordinator, CoordinatorProtocol {
 
     override func start() {
         let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
-        let loginVM = ViewModelFactory.makeLoginVM(appCoordinator: coordinator)
-        let loginVC = ViewControllerFactory.makeLoginVC(viewModel: loginVM)
-        engine.push(viewController: loginVC)
+        let viewModel = ViewModelFactory.makeTabBarVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeTabBarVC(viewModel: viewModel)
+        engine.replace(viewController: viewController)
     }
 }

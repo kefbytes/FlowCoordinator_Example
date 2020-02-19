@@ -1,18 +1,18 @@
 //
-//  OrdersVC.swift
+//  ShipmentsVC.swift
 //  FlowCoordinator_Example
 //
-//  Created by Franks,Kent on 1/8/20.
+//  Created by Franks,Kent on 1/9/20.
 //  Copyright © 2020 Kefbytes LLC. All rights reserved.
 //
 
 import UIKit
 
-class OrdersVC: UIViewController, VCProtocol {
-    var ordersVM: OrdersVMProtocol?
+class ShipmentsVC: UIViewController, VCProtocol {
+    var shipmentsVM: ShipmentsVMProtocol?
 
     required init(viewModel: VMProtocol) {
-        self.ordersVM = viewModel as? OrdersVMProtocol
+        self.shipmentsVM = viewModel as? ShipmentsVMProtocol
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -22,10 +22,10 @@ class OrdersVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .systemGreen
         setupDetailsButton()
     }
-    
+
     // MARK: UI
     private func setupDetailsButton() {
         let detailsButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
@@ -37,6 +37,6 @@ class OrdersVC: UIViewController, VCProtocol {
 
     // MARK: Actions
     @objc private func presentDetailsAction() {
-        ordersVM?.displayOrderDetails()
+        shipmentsVM?.displayShipmentDetails()
     }
 }

@@ -1,18 +1,18 @@
 //
-//  DashboardVM.swift
+//  AddItemVM.swift
 //  FlowCoordinator_Example
 //
-//  Created by Franks,Kent on 1/8/20.
+//  Created by Franks,Kent on 1/10/20.
 //  Copyright © 2020 Kefbytes LLC. All rights reserved.
 //
 
 import Foundation
 
-protocol DashboardVMProtocol: VMProtocol {
+protocol AddItemVMProtocol: VMProtocol {
 
 }
 
-struct DashboardVM: DashboardVMProtocol {
+struct AddItemVM: AddItemVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {

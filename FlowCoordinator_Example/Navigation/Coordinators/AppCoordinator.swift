@@ -18,10 +18,15 @@ class AppCoordinator: BaseCoordinator {
         super.init()
     }
 
+    // root view
     override func start() {
-        // preparing root view
         let loginCoordinator = CoordinatorFactory.makeLoginCoordinator(navigationEngine: engine)
         loginCoordinator.start()
+    }
+
+    func presentTabBar() {
+        let tabBarCoordinator = CoordinatorFactory.makeTabBarCoordinator(navigationEngine: engine)
+        tabBarCoordinator.start()
     }
 
     func presentDashboard() {
@@ -29,8 +34,23 @@ class AppCoordinator: BaseCoordinator {
         dashboardCoordinator.start()
     }
 
-    func presentDashboardDetails() {
-        let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine)
-        dashboardCoordinator.displayDashboardDetails()
+    func presentOrderDetails() {
+        let ordersCoordinator = CoordinatorFactory.makeOrdersCoordinator(navigationEngine: engine)
+        ordersCoordinator.displayOrderDetails()
+    }
+
+    func scanComplete() {
+        let scanCoordinator = CoordinatorFactory.makeScanCoordinator(navigationEngine: engine)
+        scanCoordinator.scanComplete()
+    }
+
+    func presentProductDetails() {
+        let productDetailsCoordinator = CoordinatorFactory.makeProductDetailsCoordinator(navigationEngine: engine)
+        productDetailsCoordinator.start()
+    }
+
+    func presentShipmentDetails() {
+        let shipmentsCoordinator = CoordinatorFactory.makeShipmentsCoordinator(navigationEngine: engine)
+        shipmentsCoordinator.displayShipmentDetails()
     }
 }

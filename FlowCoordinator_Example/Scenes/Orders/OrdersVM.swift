@@ -1,5 +1,5 @@
 //
-//  DashboardVM.swift
+//  OrdersVM.swift
 //  FlowCoordinator_Example
 //
 //  Created by Franks,Kent on 1/8/20.
@@ -8,14 +8,18 @@
 
 import Foundation
 
-protocol DashboardVMProtocol: VMProtocol {
-
+protocol OrdersVMProtocol: VMProtocol {
+    func displayOrderDetails()
 }
 
-struct DashboardVM: DashboardVMProtocol {
+struct OrdersVM: OrdersVMProtocol {
     var appCoordinator: AppCoordinator?
 
     init(coordinator: AppCoordinator) {
         self.appCoordinator = coordinator
+    }
+    
+    func displayOrderDetails() {
+        appCoordinator?.presentOrderDetails()
     }
 }

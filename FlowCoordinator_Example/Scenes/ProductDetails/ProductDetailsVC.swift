@@ -1,18 +1,18 @@
 //
-//  DashboardVC.swift
+//  ProductDetailsVC.swift
 //  FlowCoordinator_Example
 //
-//  Created by Franks,Kent on 1/8/20.
+//  Created by Franks,Kent on 1/9/20.
 //  Copyright © 2020 Kefbytes LLC. All rights reserved.
 //
 
 import UIKit
 
-class DashboardVC: UIViewController, VCProtocol {
-    var dashboardVM: DashboardVMProtocol?
+class ProductDetailsVC: UIViewController {
+    var productDetailsVM: ProductDetailsVMProtocol?
 
-    required init(viewModel: VMProtocol) {
-        self.dashboardVM = viewModel as? DashboardVMProtocol
+    init(viewModel: ProductDetailsVMProtocol) {
+        self.productDetailsVM = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -22,6 +22,7 @@ class DashboardVC: UIViewController, VCProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemTeal
+        self.title = "Product Details"
     }
 }

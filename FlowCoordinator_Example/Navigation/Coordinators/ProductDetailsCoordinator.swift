@@ -1,15 +1,15 @@
 //
-//  LoginCoordinator.swift
+//  ProductDetailsCoordinator.swift
 //  FlowCoordinator_Example
 //
-//  Created by Franks,Kent on 1/8/20.
+//  Created by Franks,Kent on 1/10/20.
 //  Copyright © 2020 Kefbytes LLC. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class LoginCoordinator: BaseCoordinator, CoordinatorProtocol {
+class ProductDetailsCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
 
     required init(navigationEngine: NavigationEngineProtocol) {
@@ -18,8 +18,8 @@ class LoginCoordinator: BaseCoordinator, CoordinatorProtocol {
 
     override func start() {
         let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
-        let loginVM = ViewModelFactory.makeLoginVM(appCoordinator: coordinator)
-        let loginVC = ViewControllerFactory.makeLoginVC(viewModel: loginVM)
-        engine.push(viewController: loginVC)
+        let viewModel = ViewModelFactory.makeProductDetailsVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeProductDetailsVC(viewModel: viewModel)
+        engine.push(viewController: viewController)
     }
 }

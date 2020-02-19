@@ -9,22 +9,17 @@
 import Foundation
 import UIKit
 
-class DashboardCoordinator: BaseCoordinator {
-    private let engine: NavigationEngineProtocol
+class DashboardCoordinator: BaseCoordinator, CoordinatorProtocol {
+    let engine: NavigationEngineProtocol
 
-    init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol) {
         engine = navigationEngine
     }
 
     override func start() {
         let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
-        let viewModel = ViewModelFactory.dashboardVM(appCoordinator: coordinator)
-        let viewController = ViewControllerFactory.dashboardVC(viewModel: viewModel)
+        let viewModel = ViewModelFactory.makeDashboardVM(appCoordinator: coordinator)
+        let viewController = ViewControllerFactory.makeDashboardVC(viewModel: viewModel)
         engine.replace(viewController: viewController)
-    }
-
-    func displayDashboardDetails() {
-        let viewController = ViewControllerFactory.dashboardDetailVC()
-        engine.push(viewController: viewController)
     }
 }
