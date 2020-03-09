@@ -10,7 +10,8 @@ import Foundation
 
 protocol CoordinatorProtocol {
     var engine: NavigationEngineProtocol { get }
+    var coordinator: AppCoordinator { get }
 
-    init(navigationEngine: NavigationEngineProtocol)
+    init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator)
 }
 

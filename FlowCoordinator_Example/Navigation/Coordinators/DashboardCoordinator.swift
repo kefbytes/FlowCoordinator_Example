@@ -11,13 +11,14 @@ import UIKit
 
 class DashboardCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
         engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     override func start() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let viewModel = ViewModelFactory.makeDashboardVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeDashboardVC(viewModel: viewModel)
         engine.replace(viewController: viewController)

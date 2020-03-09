@@ -11,13 +11,13 @@ import UIKit
 
 protocol CoordinatorFactoryProtocol {
     static func makeAppCoordinator(navigationEngine: NavigationEngineProtocol) -> AppCoordinator
-    static func makeLoginCoordinator(navigationEngine: NavigationEngineProtocol) -> LoginCoordinator
-    static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol) -> TabBarCoordinator
-    static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator
-    static func makeOrdersCoordinator(navigationEngine: NavigationEngineProtocol) -> OrdersCoordinator
-    static func makeScanCoordinator(navigationEngine: NavigationEngineProtocol) -> ScanCoordinator
-    static func makeShipmentsCoordinator(navigationEngine: NavigationEngineProtocol) -> ShipmentsCoordinator
-    static func makeProductDetailsCoordinator(navigationEngine: NavigationEngineProtocol) -> ProductDetailsCoordinator
+    static func makeLoginCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> LoginCoordinator
+    static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> TabBarCoordinator
+    static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> DashboardCoordinator
+    static func makeOrdersCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> OrdersCoordinator
+    static func makeScanCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> ScanCoordinator
+    static func makeShipmentsCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> ShipmentsCoordinator
+    static func makeProductDetailsCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> ProductDetailsCoordinator
 }
 
 final class CoordinatorFactory: CoordinatorFactoryProtocol {
@@ -25,31 +25,31 @@ final class CoordinatorFactory: CoordinatorFactoryProtocol {
         return AppCoordinator(navigationEngine: navigationEngine)
     }
 
-    static func makeLoginCoordinator(navigationEngine: NavigationEngineProtocol) -> LoginCoordinator {
-        return LoginCoordinator(navigationEngine: navigationEngine)
+    static func makeLoginCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> LoginCoordinator {
+        return LoginCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 
-    static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol) -> TabBarCoordinator {
-        return TabBarCoordinator(navigationEngine: navigationEngine)
+    static func makeTabBarCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> TabBarCoordinator {
+        return TabBarCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 
-    static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol) -> DashboardCoordinator {
-        return DashboardCoordinator(navigationEngine: navigationEngine)
+    static func makeDashboardCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> DashboardCoordinator {
+        return DashboardCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 
-    static func makeOrdersCoordinator(navigationEngine: NavigationEngineProtocol) -> OrdersCoordinator {
-        return OrdersCoordinator(navigationEngine: navigationEngine)
+    static func makeOrdersCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> OrdersCoordinator {
+        return OrdersCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 
-    static func makeScanCoordinator(navigationEngine: NavigationEngineProtocol) -> ScanCoordinator {
-        return ScanCoordinator(navigationEngine: navigationEngine)
+    static func makeScanCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> ScanCoordinator {
+        return ScanCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 
-    static func makeShipmentsCoordinator(navigationEngine: NavigationEngineProtocol) -> ShipmentsCoordinator {
-        return ShipmentsCoordinator(navigationEngine: navigationEngine)
+    static func makeShipmentsCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> ShipmentsCoordinator {
+        return ShipmentsCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 
-    static func makeProductDetailsCoordinator(navigationEngine: NavigationEngineProtocol) -> ProductDetailsCoordinator {
-        return ProductDetailsCoordinator(navigationEngine: navigationEngine)
+    static func makeProductDetailsCoordinator(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) -> ProductDetailsCoordinator {
+        return ProductDetailsCoordinator(navigationEngine: navigationEngine, appCoordinator: appCoordinator)
     }
 }

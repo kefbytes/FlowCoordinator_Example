@@ -11,20 +11,20 @@ import UIKit
 
 class OrdersCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
         engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     override func start() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let viewModel = ViewModelFactory.makeOrdersVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeOrdersVC(viewModel: viewModel)
         engine.replace(viewController: viewController)
     }
 
     func displayOrderDetails() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let viewModel = ViewModelFactory.makeOrderDetailsVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeOrderDetailsVC(viewModel: viewModel)
         engine.push(viewController: viewController)

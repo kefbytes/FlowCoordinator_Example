@@ -10,13 +10,14 @@ import Foundation
 
 class ScanCoordinator: BaseCoordinator, CoordinatorProtocol {
     var engine: NavigationEngineProtocol
-    
-    required init(navigationEngine: NavigationEngineProtocol) {
-        self.engine = navigationEngine
+    let coordinator: AppCoordinator
+
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
+        engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     func scanComplete() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let productDetailsVM = ViewModelFactory.makeProductDetailsVM(appCoordinator: coordinator)
         let productDetailsVC = ViewControllerFactory.makeProductDetailsVC(viewModel: productDetailsVM)
         engine.push(viewController: productDetailsVC)

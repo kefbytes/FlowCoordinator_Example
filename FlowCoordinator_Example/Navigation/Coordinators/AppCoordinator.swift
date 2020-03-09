@@ -20,37 +20,37 @@ class AppCoordinator: BaseCoordinator {
 
     // root view
     override func start() {
-        let loginCoordinator = CoordinatorFactory.makeLoginCoordinator(navigationEngine: engine)
+        let loginCoordinator = CoordinatorFactory.makeLoginCoordinator(navigationEngine: engine, appCoordinator: self)
         loginCoordinator.start()
     }
 
     func presentTabBar() {
-        let tabBarCoordinator = CoordinatorFactory.makeTabBarCoordinator(navigationEngine: engine)
+        let tabBarCoordinator = CoordinatorFactory.makeTabBarCoordinator(navigationEngine: engine, appCoordinator: self)
         tabBarCoordinator.start()
     }
 
     func presentDashboard() {
-        let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine)
+        let dashboardCoordinator = CoordinatorFactory.makeDashboardCoordinator(navigationEngine: engine, appCoordinator: self)
         dashboardCoordinator.start()
     }
 
     func presentOrderDetails() {
-        let ordersCoordinator = CoordinatorFactory.makeOrdersCoordinator(navigationEngine: engine)
+        let ordersCoordinator = CoordinatorFactory.makeOrdersCoordinator(navigationEngine: engine, appCoordinator: self)
         ordersCoordinator.displayOrderDetails()
     }
 
     func scanComplete() {
-        let scanCoordinator = CoordinatorFactory.makeScanCoordinator(navigationEngine: engine)
+        let scanCoordinator = CoordinatorFactory.makeScanCoordinator(navigationEngine: engine, appCoordinator: self)
         scanCoordinator.scanComplete()
     }
 
     func presentProductDetails() {
-        let productDetailsCoordinator = CoordinatorFactory.makeProductDetailsCoordinator(navigationEngine: engine)
+        let productDetailsCoordinator = CoordinatorFactory.makeProductDetailsCoordinator(navigationEngine: engine, appCoordinator: self)
         productDetailsCoordinator.start()
     }
 
     func presentShipmentDetails() {
-        let shipmentsCoordinator = CoordinatorFactory.makeShipmentsCoordinator(navigationEngine: engine)
+        let shipmentsCoordinator = CoordinatorFactory.makeShipmentsCoordinator(navigationEngine: engine, appCoordinator: self)
         shipmentsCoordinator.displayShipmentDetails()
     }
 }

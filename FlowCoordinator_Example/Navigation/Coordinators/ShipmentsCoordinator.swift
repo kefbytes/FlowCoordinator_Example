@@ -11,13 +11,14 @@ import UIKit
 
 class ShipmentsCoordinator: BaseCoordinator, CoordinatorProtocol {
     var engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
-        self.engine = navigationEngine
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
+        engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     func displayShipmentDetails() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let viewModel = ViewModelFactory.makeShipmentDetailsVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeShipmentDetailsVC(viewModel: viewModel)
         engine.push(viewController: viewController)

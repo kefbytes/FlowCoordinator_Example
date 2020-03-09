@@ -11,13 +11,14 @@ import UIKit
 
 class ProductDetailsCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
         engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     override func start() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let viewModel = ViewModelFactory.makeProductDetailsVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeProductDetailsVC(viewModel: viewModel)
         engine.push(viewController: viewController)

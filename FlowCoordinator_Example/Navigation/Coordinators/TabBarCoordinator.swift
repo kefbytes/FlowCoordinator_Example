@@ -11,13 +11,14 @@ import UIKit
 
 class TabBarCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
         engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     override func start() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let viewModel = ViewModelFactory.makeTabBarVM(appCoordinator: coordinator)
         let viewController = ViewControllerFactory.makeTabBarVC(viewModel: viewModel)
         engine.replace(viewController: viewController)

@@ -11,13 +11,14 @@ import UIKit
 
 class LoginCoordinator: BaseCoordinator, CoordinatorProtocol {
     let engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
         engine = navigationEngine
+        coordinator = appCoordinator
     }
 
     override func start() {
-        let coordinator = CoordinatorFactory.makeAppCoordinator(navigationEngine: engine)
         let loginVM = ViewModelFactory.makeLoginVM(appCoordinator: coordinator)
         let loginVC = ViewControllerFactory.makeLoginVC(viewModel: loginVM)
         engine.push(viewController: loginVC)

@@ -11,8 +11,10 @@ import UIKit
 
 class SettingsCoordinator: BaseCoordinator, CoordinatorProtocol {
     var engine: NavigationEngineProtocol
+    let coordinator: AppCoordinator
 
-    required init(navigationEngine: NavigationEngineProtocol) {
-        self.engine = navigationEngine
+    required init(navigationEngine: NavigationEngineProtocol, appCoordinator: AppCoordinator) {
+        engine = navigationEngine
+        coordinator = appCoordinator
     }
 }
