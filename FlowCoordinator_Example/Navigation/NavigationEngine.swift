@@ -10,14 +10,13 @@ import Foundation
 import UIKit
 
 protocol NavigationEngineProtocol {
-    var navigationController: UINavigationController { get }
     func push(viewController: UIViewController)
     func replace(viewController: UIViewController)
 }
 
 class NavigationEngine: NavigationEngineProtocol {
-    var navigationController: UINavigationController
-
+    private let navigationController: UINavigationController
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }

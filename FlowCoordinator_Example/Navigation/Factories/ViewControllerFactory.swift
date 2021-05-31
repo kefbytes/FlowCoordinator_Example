@@ -10,6 +10,7 @@ import Foundation
 
 protocol ViewControllerFactoryProtocol {
     static func makeLoginVC(viewModel: LoginVMProtocol) -> LoginVC
+    static func makeTabBarVC(viewModel: TabBarVMProtocol) -> TabBarVC
     static func makeDashboardVC(viewModel: DashboardVMProtocol) -> DashboardVC
     static func makeOrdersVC(viewModel: OrdersVMProtocol) -> OrdersVC
     static func makeOrderDetailsVC(viewModel: OrderDetailsVMProtocol) -> OrderDetailsVC
@@ -25,6 +26,10 @@ protocol ViewControllerFactoryProtocol {
 struct ViewControllerFactory: ViewControllerFactoryProtocol {
     static func makeLoginVC(viewModel: LoginVMProtocol) -> LoginVC {
         return LoginVC(viewModel: viewModel)
+    }
+
+    static func makeTabBarVC(viewModel: TabBarVMProtocol) -> TabBarVC {
+        return TabBarVC(viewModel: viewModel)
     }
 
     static func makeDashboardVC(viewModel: DashboardVMProtocol) -> DashboardVC {
