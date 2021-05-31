@@ -10,7 +10,6 @@ import Foundation
 
 protocol ViewModelFactoryProtocol {
     static func makeLoginVM(appCoordinator: AppCoordinator) -> LoginVMProtocol
-    static func makeTabBarVM(appCoordinator: AppCoordinator) -> TabBarVMProtocol
     static func makeDashboardVM(appCoordinator: AppCoordinator) -> DashboardVMProtocol
     static func makeOrdersVM(appCoordinator: AppCoordinator) -> OrdersVMProtocol
     static func makeOrderDetailsVM(appCoordinator: AppCoordinator) -> OrderDetailsVMProtocol
@@ -26,10 +25,6 @@ protocol ViewModelFactoryProtocol {
 struct ViewModelFactory: ViewModelFactoryProtocol {
     static func makeLoginVM(appCoordinator: AppCoordinator) -> LoginVMProtocol {
         return LoginVM(coordinator: appCoordinator)
-    }
-
-    static func makeTabBarVM(appCoordinator: AppCoordinator) -> TabBarVMProtocol {
-        return TabBarVM(coordinator: appCoordinator)
     }
 
     static func makeDashboardVM(appCoordinator: AppCoordinator) -> DashboardVMProtocol {

@@ -25,7 +25,6 @@
 		E45E582823C7745100AB7A75 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582723C7745100AB7A75 /* SettingsVC.swift */; };
 		E45E582A23C7745D00AB7A75 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582923C7745D00AB7A75 /* SettingsVM.swift */; };
 		E45E582C23C774BA00AB7A75 /* VMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E582B23C774BA00AB7A75 /* VMProtocol.swift */; };
-		E49F8EB723C6859F00F144E9 /* TabBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EB623C6859F00F144E9 /* TabBarVM.swift */; };
 		E49F8EB923C6861700F144E9 /* OrdersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EB823C6861700F144E9 /* OrdersVM.swift */; };
 		E49F8EBB23C6975F00F144E9 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EBA23C6975F00F144E9 /* TabBarCoordinator.swift */; };
 		E49F8EBE23C69E0A00F144E9 /* OrderDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49F8EBD23C69E0A00F144E9 /* OrderDetailsVC.swift */; };
@@ -49,7 +48,6 @@
 		E4B741CF23C8B672000B3901 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B741CE23C8B672000B3901 /* AddItemVC.swift */; };
 		E4B741D123C8B6B3000B3901 /* AddItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B741D023C8B6B3000B3901 /* AddItemVM.swift */; };
 		E4CA7F1B23C641D900AD9085 /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */; };
-		E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */; };
 		E4E75B3C23C903AD00BC4B06 /* ProductDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */; };
 		E4E75B3F23C90C5900BC4B06 /* ShipmentDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B3E23C90C5900BC4B06 /* ShipmentDetailsVC.swift */; };
 		E4E75B4123C90C9E00BC4B06 /* ShipmentDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E75B4023C90C9E00BC4B06 /* ShipmentDetailsVM.swift */; };
@@ -74,7 +72,6 @@
 		E45E582723C7745100AB7A75 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		E45E582923C7745D00AB7A75 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
 		E45E582B23C774BA00AB7A75 /* VMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMProtocol.swift; sourceTree = "<group>"; };
-		E49F8EB623C6859F00F144E9 /* TabBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVM.swift; sourceTree = "<group>"; };
 		E49F8EB823C6861700F144E9 /* OrdersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVM.swift; sourceTree = "<group>"; };
 		E49F8EBA23C6975F00F144E9 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		E49F8EBD23C69E0A00F144E9 /* OrderDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsVC.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		E4B741CE23C8B672000B3901 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		E4B741D023C8B6B3000B3901 /* AddItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVM.swift; sourceTree = "<group>"; };
 		E4CA7F1A23C641D900AD9085 /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
-		E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		E4E75B3B23C903AD00BC4B06 /* ProductDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsCoordinator.swift; sourceTree = "<group>"; };
 		E4E75B3E23C90C5900BC4B06 /* ShipmentDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentDetailsVC.swift; sourceTree = "<group>"; };
 		E4E75B4023C90C9E00BC4B06 /* ShipmentDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentDetailsVM.swift; sourceTree = "<group>"; };
@@ -120,8 +116,6 @@
 		E45E581123C766F800AB7A75 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E4CA7F1C23C654B900AD9085 /* TabBarVC.swift */,
-				E49F8EB623C6859F00F144E9 /* TabBarVM.swift */,
 				E42271A323C78FDA00FB3A7A /* VCProtocol.swift */,
 				E45E582B23C774BA00AB7A75 /* VMProtocol.swift */,
 			);
@@ -389,7 +383,6 @@
 				E42271AA23C7F03500FB3A7A /* ScanCoordinator.swift in Sources */,
 				E45E581E23C773F000AB7A75 /* ScanVM.swift in Sources */,
 				E4AFB9E923C6205B005F1FF7 /* BaseCoordinator.swift in Sources */,
-				E4CA7F1D23C654B900AD9085 /* TabBarVC.swift in Sources */,
 				E45E582C23C774BA00AB7A75 /* VMProtocol.swift in Sources */,
 				E4AFB9EB23C6207A005F1FF7 /* Coordinator.swift in Sources */,
 				E4AFB9C423C61843005F1FF7 /* AppDelegate.swift in Sources */,
@@ -397,7 +390,6 @@
 				E4AFB9E523C61F34005F1FF7 /* CoordinatorFactory.swift in Sources */,
 				E4AFB9FA23C63372005F1FF7 /* DashboardVM.swift in Sources */,
 				E4B741D123C8B6B3000B3901 /* AddItemVM.swift in Sources */,
-				E49F8EB723C6859F00F144E9 /* TabBarVM.swift in Sources */,
 				E4AFB9E023C61AC3005F1FF7 /* LoginCoordinator.swift in Sources */,
 				E4B741CF23C8B672000B3901 /* AddItemVC.swift in Sources */,
 				E45E581A23C76EC400AB7A75 /* ProductDetailsVM.swift in Sources */,
